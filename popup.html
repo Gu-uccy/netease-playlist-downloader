@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌单下载助手</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <div class="brand">网易云音乐</div>
+      <h1>歌单下载助手</h1>
+      <p>打开一个歌单详情页，等待歌曲列表显示后开始批量下载。</p>
+      <label for="quality">下载品质</label>
+      <select id="quality">
+        <option value="standard">标准音质</option>
+        <option value="higher">较高音质</option>
+        <option value="exhigh">极高音质</option>
+        <option value="lossless">无损音质</option>
+        <option value="hires">Hi-Res</option>
+      </select>
+      <button id="start" type="button">下载当前歌单</button>
+      <button id="pause" class="secondary" type="button" disabled>暂停任务</button>
+      <div id="status" role="status">也可以点击歌单页面中的“批量下载”。</div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

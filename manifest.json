@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "网易云音乐歌单下载助手",
+  "version": "1.2.2",
+  "description": "按选择的音质批量下载网易云音乐歌单，支持暂停和继续。",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://music.163.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://music.163.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_title": "网易云音乐歌单下载助手",
+    "default_popup": "popup.html"
+  }
+}
